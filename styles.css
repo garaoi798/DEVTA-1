@@ -7,7 +7,7 @@
 body {
   background-color: #111;
   color: #fff;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -216,6 +216,7 @@ img {
   border-radius: 25px;
   border-width: 2px;
   border-color: #333333;
+  margin-bottom: 50px;
 }
 
 .category__header{
@@ -225,7 +226,6 @@ img {
   gap: 20px;
   padding: 50px;
 }
-
 
 
 .category__header-title {
@@ -309,37 +309,87 @@ img {
 }
 
 
+/* ======================================= */
+/* GUIDELINES */
+/* ======================================= */
 
-
-
-
-
-
-/* Optional: Responsive tweak */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .nav-links {
-    gap: 1rem;
-  }
-
-  .nav-left,
-  .nav-right {
+  .guidelines-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
     justify-content: center;
+    border-style: dashed;
+    border-radius: 25px;
+    border-width: 2px;
+    border-color: #333333;
+    margin-bottom: 50px;
   }
 
-  .nav-center {
-    position: static;
-    transform: none;
+  .guideline-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 25px;
+    height: 100%;
+    padding-left: 50px;
   }
 
-  .filters {
-    gap: 0.5rem;
+  .guideline-img{
+    height: 250px;
+    border-top-right-radius: 25px;
   }
 
-}
+  .guidelines-grid1{
+    grid-column: span 3;
+    grid-row: span 1;
+    border-bottom: 2px dashed #333333;
+  }
+
+  .guidelines-grid2{
+    grid-column: span 1;
+    grid-row: span 1;
+    border-bottom: 2px dashed #333333;
+  }
+  .guidelines-grid3{
+    grid-column: span 1;
+    grid-row: span 1;
+    border-right: 2px dashed #333333;
+  }
+  .guidelines-grid4{
+    grid-column: span 1;
+    grid-row: span 1;
+    border-right: 2px dashed #333333;
+  }
+  .guidelines-grid5{
+    grid-column: span 1;
+    grid-row: span 1;
+    border-right: 2px dashed #333333;
+  }
+
+  .guidelines-grid6{
+    grid-column: span 1;
+    grid-row: span 1;
+  }
 
 
+  .guideline-steps{
+    font-size: 1rem;
+    color: #81807e;
+  }
 
+  .guideline__card-subtext{
+    font-size: .8rem;
+    color: #81807e;
+    font-weight: 600;
+  }
+
+  .guideline-card h1, p{
+    padding-right: 35px;
+  }
+
+  .guideline__card-title{
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
