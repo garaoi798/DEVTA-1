@@ -223,6 +223,7 @@ img {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(31, 31, 31, 1);
 }
 
 
@@ -268,6 +269,8 @@ img {
   grid-column: span 2;
   justify-content: center;
   flex-direction: column;
+  padding-left: 50px;
+  gap: 10px;
 }
 
 .filter-grid2 {
