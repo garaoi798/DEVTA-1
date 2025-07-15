@@ -28,12 +28,6 @@ body {
   width: 100%;
 }
 
-.button {
-  padding: 18px 24px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
 
 .shop-button {
   display: flex;
@@ -48,6 +42,9 @@ body {
   border: none;
   white-space: nowrap;
   border-radius: 12px;
+  padding: 18px 24px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .shop-button-hide {
@@ -65,8 +62,8 @@ body {
   border-radius: 12px;
 }
 .arrow-icon {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   stroke: #ffffff;
   stroke-width: 1.5;
 }
@@ -86,10 +83,11 @@ body {
   font-size: 16px;
   cursor: pointer;
   border: 2px dashed #1F1F1F;
-}
+} 
 
 .title{
   font-size: clamp(2rem, 5vw, 3rem);
+  /* font-size: 48px; */
   font-weight: 400;
   color: white;
 }
@@ -223,7 +221,6 @@ img {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(31, 31, 31, 1);
 }
 
 
@@ -269,8 +266,6 @@ img {
   grid-column: span 2;
   justify-content: center;
   flex-direction: column;
-  padding-left: 50px;
-  gap: 10px;
 }
 
 .filter-grid2 {
@@ -691,6 +686,33 @@ img {
     border-radius: 25px;
   }
 
+  .collection__profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .collection__profile-left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .collection__profile-details{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .profile-name{
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+  .profile-address{
+    font-family: 'Roboto mono';
+    font-size: 18px;
+    color: #676665;
+  }
+
   .collection-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -715,7 +737,7 @@ img {
   }
 
   .stars{
-    height: 16px;
+    height: 24px;
   }
 
   .collection-grid1{
@@ -902,7 +924,6 @@ img {
 /* =================================== */
 
 
-
 .footer-top{
   border-top: 2px dashed #333333;
   height: 100px;
@@ -1070,8 +1091,16 @@ img {
 
 
   /* The Styleloom  */
+  .collection__img-container img{
+    height: 60px;
+  }
 
-  
+  .profile-name{
+    font-size: 18px;
+  }
+  .profile-address{
+    font-size: 16px;
+  }
 
   /* Have Questions  */
 
@@ -1347,6 +1376,16 @@ img {
 
 
   /* The Styleloom  */
+  .collection__img-container img{
+    height: 50px;
+  }
+  .profile-name{
+    font-size: 16px;
+  }
+  .profile-address{
+    font-size: 14px;
+  }
+
   .collection-grid{
     grid-template-columns: auto;
   }
@@ -1462,3 +1501,287 @@ img {
     height: 48px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================== */
+/* PRODUCT PAGE */
+/* ========================================== */
+.border-bottom-hide{
+  border-bottom: none;
+}
+
+
+/* Explore the latest */
+.product__grid-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border-top: 2px dashed #333333;
+}
+
+.product-types-title{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.product-subgrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(autofit, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  .button__view-all{
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    
+    .button__view-all{
+      display: flex;
+      align-items: center;
+      font-family: 'Roboto mono';
+      font-size: 16px;
+      color: #B3B3B2;
+      gap: 10px;
+      background: none;
+      border: none;
+      padding: 20px;
+      cursor: pointer;  
+    }
+    
+    .product__view-all{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      border-top: 2px dashed #333333;
+    }
+
+    .product__view-all{
+      padding: 8px;
+    }
+
+    .product-subgrid{
+      grid-template-columns: auto;
+    }
+    .product-types-title{
+      font-size: 24px;
+    }
+
+    .product__grid-header{
+      padding: 20px;
+    }
+
+    
+  }
+
+
+
+  /* =========================================== */
+  /* PRODUCT DETAILS PAGE  */
+  /* ================================================ */
+
+  .details{
+    border: 2px dashed #333333;
+    margin-bottom: 50px;
+    border-radius: 20px;
+  }
+
+  .details-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+  }
+  
+  .details__header-right{
+    display: flex;
+    gap: 20px;
+  }
+
+  .details__header-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .details-button1{
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .details-button2{
+    font-family: 'Roboto mono';
+    font-size: 18px;
+    font-weight: 400;
+    color: #0F0F0F;
+    background-color: #C2B4A3;
+  }
+
+  .in-stock{
+    font-family: 'Roboto mono';
+    font-size: 16px;
+    background-color: #152011;
+    color: #8AF265;
+    padding: 8px 20px;
+    border-radius: 100px;
+    margin-left: 10px;
+  }
+
+
+  .details-flex{
+    display: flex;
+    align-items: center;
+    border-top: 2px dashed #333333;
+    border-bottom: 2px dashed #333333;
+  }
+  .details-left{
+    border-right: 2px dashed #333333;
+    padding: 50px 30px;
+    height: 100%;
+  }
+
+  .details-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+    padding-left: 30px;
+  }
+
+  .details-right img, .details-left img{
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .details-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .details__grid-right{
+    border-left: 2px dashed #333333;
+    border-bottom: none;
+  }
+
+  .details-title{
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .details-subtext{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .details-card{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 80px;
+    width: 100%;
+    gap: 16px;
+    border-bottom: 2px dashed #333333;
+  }
+
+  .details__card-ratings{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 80px;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .details-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .details-price p{
+    display: flex;
+    font-size: 30px;
+    width: 100%;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .details-card ul{
+    margin-left: 20px;
+  }
+
+  .details__blank-container{
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  .details__blank-container img{
+    width: 100%;
+  }
+  
+  .details-sizes{
+    display: flex;
+    gap: 16px;
+  }
+  .details-sizes p{
+    background-color: #1A1A1A;
+    padding: 8px 34px;
+    border-radius: 100px;
+    color: #FFFFFF;
+  }
+
+  .details-ratings{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+  }
+
+  .rating-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    flex-basis: 30%;
+  }
+  .rating-title{
+    font-family: 'Roboto mono';
+    font-size: 50px;
+    font-weight: 500;
+  }
+
+  .rating-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .rating-right div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
